@@ -1,0 +1,14 @@
+<launch>
+
+  <group ns="/">
+    <node pkg="cat_mouse_core" name="referee" type="cat_mouse_sim"/>
+    <node pkg="turtlesim" name="turtlesim" type="turtlesim_node"/>
+    <node pkg="rosservice" name="clean" type="rosservice" args="call /kill turtle1"/>
+    <node pkg="rosservice" name="spawnJF" type="rosservice" args="call /spawn 1 1 0 JF"/>
+    <node pkg="rosservice" name="spawnJO" type="rosservice" args="call /spawn 1 10 0 JO"/>
+    <node pkg="rosservice" name="spawnTC" type="rosservice" args="call /spawn 10 1 3.1485 TC"/>
+    <node pkg="rosservice" name="spawnXA" type="rosservice" args="call /spawn 10 10 3.1485 XA"/>
+  </group>
+
+
+</launch>
